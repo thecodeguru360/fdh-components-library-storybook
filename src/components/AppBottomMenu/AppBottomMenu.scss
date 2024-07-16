@@ -1,0 +1,19 @@
+.AppBottomMenu {
+  .menu-container {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    border-top: 3px solid #007caf;
+    background: #fff;
+    box-shadow: 4px -4px 9px 0px rgba(0, 0, 0, 0.06);
+    .back-action {
+      margin-right: auto;
+    }
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+}

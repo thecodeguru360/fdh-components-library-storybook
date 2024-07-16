@@ -1,0 +1,83 @@
+.AppFormProgressBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  .progress-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+
+    .label-active {
+      color: #007caf;
+      font-weight: 600;
+    }
+
+    .label-completed {
+      color: #007caf;
+    }
+
+    .label-incomplete {
+      color: #6c757d;
+    }
+
+    & > span {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+  }
+
+  .progress-line {
+    height: 5px;
+    width: 100%;
+  }
+
+  .completed .progress-line {
+    background-color: #007caf;
+  }
+
+  .incomplete .progress-line {
+    background-color: #dfdfdf;
+  }
+
+  .active .progress-line {
+    background-color: #007caf;
+    background-image: linear-gradient(to right, #007caf 50%, #dfdfdf 50%);
+  }
+
+  .progress-icon {
+    position: absolute;
+    top: -18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px 0;
+
+    .icon {
+      padding-top: 7px;
+    }
+
+    .icon-active {
+      padding-top: 7px;
+      width: 13px;
+    }
+  }
+
+  .completed .progress-icon {
+    background-color: #007caf;
+  }
+
+  .incomplete .progress-icon {
+    background-color: #dfdfdf;
+  }
+
+  .active .progress-icon {
+    background-color: #007caf;
+    transform: scale(1.4);
+  }
+}

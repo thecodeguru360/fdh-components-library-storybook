@@ -1,0 +1,27 @@
+// @import "../src/_metronic/assets/sass/init";
+// @import "../src/_metronic/assets/sass/style.scss";
+// @import "../src/_metronic/assets/sass/style.react.scss";
+// import "../../_metronic/assets/sass/style.react.scss";
+// import "../../_metronic/assets/sass/style.scss";
+$theme-colors: (
+  "primary": #007caf,
+  "info": #d9f5ff,
+  "success": #dbf8dd,
+  "warning": #fff797,
+  "danger": #dc3545,
+);
+:root {
+  --bs-border-color: #ced4da !important;
+}
+* {
+  font-family: "Open Sans" !important;
+}
+
+// @import "../node_modules/bootstrap/scss/bootstrap";
+
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}

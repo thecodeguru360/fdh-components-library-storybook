@@ -1,0 +1,44 @@
+.AppAccordion {
+  .simple {
+    margin: 11px 0px;
+  }
+  .simple-header {
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .simple-body {
+    margin-top: 4px;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 26px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .block {
+    margin: 11px 0px;
+    padding: 20px;
+    // background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 21px 6px rgba(0, 0, 0, 0.03);
+  }
+  .block-header {
+    display: flex;
+    cursor: pointer;
+    .title {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .icon {
+      margin-left: auto;
+    }
+  }
+  .block-body {
+    margin-top: 20px;
+  }
+}
