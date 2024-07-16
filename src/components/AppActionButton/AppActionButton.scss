@@ -1,0 +1,93 @@
+.AppActionButton {
+  position: relative;
+
+  .actions-container {
+    width: auto;
+    min-width: 100px;
+    max-height: 320px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4px;
+    overflow: auto;
+    overflow-x: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 21px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    .action-item {
+      width: 100%;
+      button {
+        width: 100%;
+        font-size: 14px;
+        color: #495057;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        &:hover {
+          background: none;
+          opacity: 0.8;
+        }
+        &:disabled {
+          opacity: 0.4;
+        }
+        div {
+          text-wrap: nowrap;
+        }
+      }
+    }
+
+    &.mt-m {
+      top: 50px;
+    }
+    &.mt-sm {
+      top: 40px;
+    }
+    &.mt-lg {
+      top: 60px;
+    }
+  }
+
+  .icon {
+    border-radius: 50px;
+    --bs-btn-color: #023345;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #023345;
+    --bs-btn-hover-bg: #d6f3ff;
+    --bs-btn-hover-border-color: #d6f3ff;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #023345;
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: transparent;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #d7d8db;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: transparent;
+    --bs-btn-padding-y: 6px;
+    --bs-btn-padding-x: 15px;
+    --bs-btn-font-size: 12px;
+    &.active {
+      --bs-btn-color: #023345;
+      background-color: #d6f3ff;
+      border-color: #d6f3ff;
+    }
+  }
+
+  .button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ml-7 {
+    margin-left: 7px;
+  }
+}

@@ -1,0 +1,50 @@
+.AppNavigationMenu {
+  &.progress-bar {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 30px;
+    position: relative;
+    width: 275px;
+  }
+  .menu-button {
+    background-color: #005f85;
+    width: 100%;
+  }
+  &.progress-bar .category-dropdown {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    background-color: #005f85;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  &.progress-bar .title {
+    align-items: center;
+    align-self: stretch;
+    background-color: #005f85;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    width: 100%;
+  }
+
+  &.progress-bar .list {
+    align-items: center;
+    align-self: stretch;
+    background-color: #005f85;
+    color: white;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+    width: 100%;
+  }
+  .btn .btn-primary {
+    background-color: #005f85;
+  }
+}

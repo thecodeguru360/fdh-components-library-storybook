@@ -1,0 +1,67 @@
+.AppTag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #495057;
+  gap: 7px;
+  padding: 4px 15px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-right: 7px;
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #495057;
+  }
+  .avatar {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #f8d7da;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    font-weight: bold;
+  }
+  &.color-blush {
+    background-color: #f8d7da;
+  }
+  &.color-mint {
+    background-color: #e4f1ea;
+  }
+  &.color-green {
+    background-color: #dbf8dd;
+  }
+  &.color-grey {
+    background-color: #e9ecef;
+  }
+  &.color-yellow {
+    background-color: #fcf2e5;
+  }
+  &.color-pink {
+    background-color: #f8e4fd;
+  }
+  &.color-spearmint {
+    background-color: #d2f3ea;
+  }
+  &.color-periwinkle {
+    background-color: #e7e8f6;
+  }
+  &.color-default {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    &:hover {
+      background-color: #f4f5f6;
+    }
+  }
+  .close {
+    cursor: pointer;
+    color: #495057;
+    opacity: 0.8;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

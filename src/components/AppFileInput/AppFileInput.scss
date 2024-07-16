@@ -1,0 +1,41 @@
+.AppFileInput {
+  .label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .label-required {
+    margin-left: 4px;
+    color: var(--bs-danger);
+  }
+
+  .form-control {
+    border-radius: 4px;
+
+    &:focus {
+      outline: 2px solid #80bdff;
+      box-shadow: none;
+    }
+    &.invalid {
+      border-color: var(--bs-form-invalid-color);
+    }
+  }
+  .form-text {
+    font-size: 12px;
+    font-style: italic;
+  }
+  input[type="file"] {
+    &::file-selector-button {
+      background-color: #f4f5f6;
+      float: right;
+      margin-right: -12px;
+      margin-left: 6px;
+      border-right: none;
+      border-left: 1px solid var(--bs-border-color);
+    }
+  }
+  .error {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--bs-form-invalid-color);
+  }
+}
