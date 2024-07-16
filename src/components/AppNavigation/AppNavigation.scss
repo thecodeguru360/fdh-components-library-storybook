@@ -1,0 +1,91 @@
+.AppNavigation {
+  .nav-action {
+    position: relative;
+    background-color: #004e6a;
+    width: 275px;
+    height: 100px;
+    padding: 0 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-container {
+    padding: 15px 0px;
+    border-top: 1px solid #fff;
+    background-color: #004e6a;
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4px;
+    position: absolute;
+    min-height: 100px;
+    top: 100px;
+    z-index: 201;
+  }
+  .nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .icon {
+      font-size: 30px;
+    }
+    .name {
+      font-size: 14px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  .login-btn {
+    color: #fff;
+  }
+  .logout-btn {
+    margin: 15px;
+    border-radius: 50px;
+    --bs-btn-color: #023345;
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: #fff;
+    --bs-btn-hover-color: #023345;
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-focus-shadow-rgb: 38, 144, 187;
+    --bs-btn-active-color: #023345;
+    --bs-btn-active-bg: #fff;
+    --bs-btn-active-border-color: #023345;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-padding-y: 6px;
+    --bs-btn-padding-x: 15px;
+    --bs-btn-font-size: 12px;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+    li {
+      padding: 8.5px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #fff;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .nav-item-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .has-border {
+  }
+  .sub-nav-items {
+    padding-left: 2px;
+  }
+}

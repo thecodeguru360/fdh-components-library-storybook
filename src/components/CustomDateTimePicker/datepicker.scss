@@ -1,0 +1,234 @@
+.AppDatePicker {
+  $border-color: #ddd;
+  $selectable-background-color: #ffffff;
+  $primary-color: #666;
+  $selected-background-color: var(--bs-primary);
+  $hover-background-color: var(--bs-primary);
+  $selected-color: white;
+
+  .datepicker {
+    user-select: none;
+    position: relative;
+
+    &__calendar-container {
+      position: absolute;
+
+      background-color: white;
+      box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.18);
+      padding: 15px 10px;
+      border-radius: 15px;
+      z-index: 100;
+      width: 100%;
+      box-sizing: border-box;
+      height: 320px;
+      min-width: 300px;
+    }
+
+    &__today {
+      cursor: pointer;
+      opacity: 0.5;
+      font-weight: 700;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      padding: 10px;
+      display: block;
+
+      &:hover {
+        color: $hover-background-color;
+      }
+    }
+
+    &__navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 10px;
+
+      &-prev {
+        cursor: pointer;
+
+        svg {
+          display: block;
+          width: 30px;
+          height: 30px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &-next {
+        cursor: pointer;
+
+        svg {
+          display: block;
+          width: 30px;
+          height: 30px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &__input-container {
+      position: relative;
+      display: inline-block;
+      z-index: 0;
+
+      input {
+        cursor: pointer;
+      }
+
+      .calendar-icon {
+        cursor: pointer;
+        color: $hover-background-color;
+        font-size: 14px;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        height: 1.3em;
+        transform: translateY(-50%);
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    &__body {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    &__header {
+      th {
+        width: auto;
+        margin-bottom: 8px;
+        color: #495057;
+        font-size: 11px;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+        height: 30px;
+        cursor: default;
+      }
+    }
+
+    &__day {
+      width: 14.2857142857%;
+      box-sizing: border-box;
+      background: $selectable-background-color;
+
+      color: $primary-color;
+      font-size: 11px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 5px;
+      border-collapse: collapse;
+      cursor: pointer;
+      height: 3.5em;
+      transition: background-color 0.05s ease;
+      border-radius: 50%;
+
+      &.off-month {
+        opacity: 0.5;
+      }
+
+      &.today {
+        color: $hover-background-color;
+      }
+
+      &:hover {
+        background-color: $hover-background-color;
+        color: $selected-color;
+      }
+
+      &.selected {
+        background-color: $selected-background-color;
+        color: $selected-color;
+      }
+    }
+
+    &__month-container {
+      width: 140px;
+      height: 220px;
+      padding: 9px 0px;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 10px;
+      overflow: scroll;
+      border-radius: 10px;
+      box-shadow: 0px 2px 21px 6px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
+      position: absolute;
+      top: 60px;
+      left: 16px;
+    }
+
+    &__year-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      grid-gap: 10px;
+      padding: 9px 0px;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      height: 270px;
+      width: 80px;
+      overflow: scroll;
+      border-radius: 10px;
+      box-shadow: 0px 2px 21px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &__year,
+    &__month {
+      display: flex;
+      padding: 2px 20px;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        color: $hover-background-color;
+      }
+
+      &.selected {
+        color: $hover-background-color;
+      }
+    }
+    .mr-6 {
+      margin-right: 6px;
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 600;
+      background: transparent;
+      color: $hover-background-color;
+      border: none;
+      display: flex;
+      align-items: center;
+      height: 2.5em;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .form-text {
+    font-size: 12px;
+  }
+  .pointer {
+    cursor: pointer;
+  }
+  .label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .label-required {
+    margin-left: 4px;
+    color: var(--bs-danger);
+  }
+}

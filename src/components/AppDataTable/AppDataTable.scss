@@ -1,0 +1,126 @@
+.AppDatatable {
+  .rdt_Table {
+    border: 1px solid #e9ecef;
+    box-shadow: 4px 4px 21px 6px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+  }
+
+  .rdt_TableHeadRow {
+    display: flex;
+    background: #e9ecef;
+    color: #495057 !important;
+    font-size: 16px;
+    .rdt_TableCol_Sortable {
+      justify-content: space-between;
+    }
+  }
+
+  .rdt_TableCell {
+    color: #495057 !important;
+    font-size: 14px;
+  }
+
+  .even-row {
+    background-color: #fafafa;
+  }
+
+  .filter {
+    display: flex;
+    gap: 1rem;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .search-icon {
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+  }
+
+  .filter-dropdown {
+    .dropdown-toggle,
+    .dropdown-toggle:active {
+      height: 2.4rem;
+      width: 8rem;
+      background-color: white;
+      border: 1px solid #ced4da;
+      color: #495057;
+    }
+
+    .dropdown-toggle:hover {
+      background-color: #ced4da;
+    }
+
+    ::after {
+      display: none;
+    }
+
+    .dropdown-menu {
+      width: 18rem;
+    }
+  }
+
+  .btn-clear {
+    border: none;
+  }
+
+  .clear-search {
+    position: absolute;
+    right: 48px;
+    top: 7px;
+  }
+
+  .div-right-center {
+    display: flex !important;
+    justify-content: flex-end;
+    align-items: center !important;
+  }
+
+  .app-div-center {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .filter-fields {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.linear-indeterminate {
+  width: 100%;
+  height: 4px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+.linear-indeterminate .bar {
+  width: 100%;
+  height: 100%;
+  background-color: #007caf;
+  position: absolute;
+  animation: indeterminate 1.5s infinite;
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -100%;
+    width: 100%;
+  }
+  50% {
+    left: 0%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 10%;
+  }
+}

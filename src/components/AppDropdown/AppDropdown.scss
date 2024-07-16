@@ -1,0 +1,222 @@
+.AppDropdown {
+  position: relative;
+
+  .links-container {
+    min-width: 140px;
+    max-height: 320px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4px;
+    overflow: auto;
+    overflow-x: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 21px 6px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    position: absolute;
+    z-index: 101;
+
+    left: 10px;
+    .link-item {
+      a,
+      button {
+        font-size: 14px;
+        color: #495057;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      button {
+        border: none;
+        padding: 0;
+        background: transparent;
+      }
+    }
+
+    &.mt-m {
+      top: 50px;
+    }
+    &.mt-sm {
+      top: 40px;
+    }
+    &.mt-lg {
+      top: 60px;
+    }
+  }
+
+  .primary {
+    border-radius: 50px;
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #007caf;
+    --bs-btn-border-color: #007caf;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #006995;
+    --bs-btn-hover-border-color: #00638c;
+    --bs-btn-focus-shadow-rgb: 38, 144, 187;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #00638c;
+    --bs-btn-active-border-color: #005d83;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #d7d8db;
+    --bs-btn-disabled-border-color: #d7d8db;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-font-size: 14px;
+    &-lg {
+      @extend .primary;
+      --bs-btn-padding-y: 15px;
+      --bs-btn-padding-x: 30px;
+      --bs-btn-font-size: 14px;
+    }
+    &-sm {
+      @extend .primary;
+      --bs-btn-padding-y: 6px;
+      --bs-btn-padding-x: 15px;
+      --bs-btn-font-size: 12px;
+    }
+  }
+  .secondary {
+    border-radius: 50px;
+    --bs-btn-color: #007caf;
+    --bs-btn-border-color: #007caf;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #007caf;
+    --bs-btn-hover-border-color: #007caf;
+    --bs-btn-focus-shadow-rgb: 0, 124, 175;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #007caf;
+    --bs-btn-active-border-color: #007caf;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #d7d8db;
+    --bs-btn-disabled-border-color: #d7d8db;
+    --bs-gradient: none;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-font-size: 14px;
+    &-lg {
+      @extend .secondary;
+      --bs-btn-padding-y: 15px;
+      --bs-btn-padding-x: 30px;
+      --bs-btn-font-size: 14px;
+    }
+    &-sm {
+      @extend .secondary;
+      --bs-btn-padding-y: 6px;
+      --bs-btn-padding-x: 15px;
+      --bs-btn-font-size: 12px;
+    }
+  }
+  .tertiary {
+    border-radius: 0px;
+    --bs-btn-color: #005f85;
+    --bs-btn-bg: #d9f5ff;
+    --bs-btn-border-color: #d9f5ff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #007caf;
+    --bs-btn-hover-border-color: #007caf;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #005f85;
+    --bs-btn-active-bg: #d9f5ff;
+    --bs-btn-active-border-color: #80bdff;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #005f85;
+    --bs-btn-disabled-bg: #d7d8db;
+    --bs-btn-disabled-border-color: #d7d8db;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-font-size: 14px;
+    &-lg {
+      @extend .tertiary;
+      --bs-btn-padding-y: 15px;
+      --bs-btn-padding-x: 30px;
+      --bs-btn-font-size: 14px;
+    }
+    &-sm {
+      @extend .tertiary;
+      --bs-btn-padding-y: 6px;
+      --bs-btn-padding-x: 15px;
+      --bs-btn-font-size: 12px;
+    }
+    &:hover,
+    &:active {
+      border-radius: 4px;
+    }
+  }
+  .text {
+    --bs-btn-color: #007caf;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #007caf;
+    --bs-btn-hover-bg: #f4f5f6;
+    --bs-btn-hover-border-color: #ebedf2;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #005f85;
+    --bs-btn-active-bg: #d9f5ff;
+    --bs-btn-active-border-color: #80bdff;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #005f85;
+    --bs-btn-disabled-bg: #d9f5ff;
+    --bs-btn-disabled-border-color: #d9f5ff;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-font-size: 14px;
+    &-lg {
+      --bs-btn-padding-y: 15px;
+      --bs-btn-padding-x: 30px;
+      --bs-btn-font-size: 14px;
+    }
+    &-sm {
+      --bs-btn-padding-y: 6px;
+      --bs-btn-padding-x: 15px;
+      --bs-btn-font-size: 12px;
+    }
+  }
+  .icon {
+    border-radius: 50px;
+    --bs-btn-color: #007caf;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #007caf;
+    --bs-btn-hover-border-color: #007caf;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #005f85;
+    --bs-btn-active-bg: #d9f5ff;
+    --bs-btn-active-border-color: #80bdff;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #005f85;
+    --bs-btn-disabled-bg: #d9f5ff;
+    --bs-btn-disabled-border-color: #d9f5ff;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-font-size: 14px;
+    &-lg {
+      --bs-btn-padding-y: 15px;
+      --bs-btn-padding-x: 30px;
+      --bs-btn-font-size: 14px;
+    }
+    &-sm {
+      --bs-btn-padding-y: 6px;
+      --bs-btn-padding-x: 15px;
+      --bs-btn-font-size: 12px;
+    }
+  }
+
+  .button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ml-7 {
+    margin-left: 7px;
+  }
+}

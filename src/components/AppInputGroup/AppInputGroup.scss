@@ -1,0 +1,87 @@
+.ehd-input-icon {
+  position: relative;
+  padding: 0;
+  width: 100%;
+}
+.ehd-input-icon .ehd-input-icon__icon {
+  position: absolute;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  top: 0;
+  width: 3.2rem;
+}
+.ehd-input-icon.ehd-input-icon--right .form-control {
+  border-radius: 4px 0px 0px 4px;
+  padding-right: 2.8rem;
+}
+.ehd-input-icon .ehd-input-icon__icon.ehd-input-icon__icon--right {
+  right: 0;
+}
+.ehd-input-icon .ehd-input-icon__icon > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  color: #6c757d;
+}
+
+.ehd-input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.ehd-input-group .form-control {
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  margin-bottom: 0;
+  border-radius: 4px 0px 0px 4px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+.ehd-input-group-append {
+  display: flex;
+  margin-left: -1px;
+}
+.ehd-input-group-append .btn {
+  position: relative;
+  z-index: 2;
+}
+.ml-7 {
+  margin-left: 7px;
+}
+
+.EHDAppInputGroup .btn-action {
+  border-radius: 0px 4px 4px 0px;
+  --bs-btn-color: #212529;
+  //   --bs-btn-bg: #d9f5ff;
+  --bs-btn-border-color: #ced4da;
+  --bs-btn-hover-color: #212529;
+  //   --bs-btn-hover-bg: #d9f5ff;
+  --bs-btn-hover-border-color: #ced4da;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #212529;
+  //   --bs-btn-active-bg: #d9f5ff;
+  --bs-btn-active-border-color: #80bdff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #495057;
+  --bs-btn-disabled-bg: #f4f5f6;
+  --bs-btn-disabled-border-color: #d7d8db;
+  --bs-btn-padding-x: 12px;
+  --bs-btn-font-size: 16px;
+}
