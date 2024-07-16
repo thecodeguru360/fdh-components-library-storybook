@@ -1,0 +1,56 @@
+.readonlycard {
+  padding: 6px 20px !important;
+  gap: 8px !important;
+  //   border: none !important;
+  //   box-shadow: none !important;
+  .contactcard-portlet__head {
+    padding: 0px !important;
+    min-height: 0px !important;
+  }
+  .contactcard-portlet__head-title {
+    .readonlycard_title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      color: #212529;
+    }
+    .readonlycard_sub_title {
+      font-family: "Inter";
+      font-style: italic;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 10px;
+    }
+  }
+  .contactcard-portlet__head-actions {
+    display: flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    align-items: center;
+    svg {
+      cursor: text !important;
+    }
+    .readonlycard_result {
+      padding-left: 10px !important;
+    }
+  }
+  .contactcard-portlet__body {
+    padding: 6px 0px !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #656d77;
+    .readonlycard_desc {
+      font-style: italic;
+    }
+    .readonlycard_extracontent {
+      font-style: normal;
+      padding-bottom: 12px;
+    }
+  }
+}

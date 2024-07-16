@@ -1,0 +1,67 @@
+.AppToggle {
+  label {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  i {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e9ecef;
+    transition: 0.3s;
+    border-radius: 30px;
+  }
+  i:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 2.6px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  input:disabled + i {
+    background-color: #e9ecef;
+  }
+  input:disabled + i:before {
+    box-shadow: none;
+  }
+  input[disabled][checked] + i {
+    background-color: #e9ecef;
+  }
+  input[disabled][checked] + i:before {
+    background-color: #ced4da;
+    box-shadow: none;
+  }
+
+  input:checked + i {
+    background-color: #a0d799;
+  }
+
+  input:checked + i:before {
+    transform: translateX(18px);
+  }
+  .label {
+    margin-right: 8px;
+    font-size: 14px;
+    &.disabled {
+      opacity: 0.6;
+    }
+  }
+}

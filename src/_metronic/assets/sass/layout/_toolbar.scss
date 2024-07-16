@@ -1,0 +1,21 @@
+//
+// Toolbar
+//
+
+// General
+.toolbar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 116px !important;
+
+  // Custom button
+  .btn.btn-custom {
+    background-color: rgba($white, 0.1);
+  }
+  &__bottomshadow {
+    -webkit-box-shadow: 4px 4px 9px 6px rgba(82, 63, 105, 0.05);
+    -moz-box-shadow: 4px 4px 9px 6px rgba(82, 63, 105, 0.05);
+    box-shadow: 4px 4px 9px 6px rgba(82, 63, 105, 0.05);
+  }
+}

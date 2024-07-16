@@ -1,0 +1,331 @@
+//
+// Header
+//
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: get($header-config, desktop, default, height);
+    transition: left get($aside-config, transition-speed) ease;
+    border-bottom: var(--#{$prefix}header-desktop-default-border);
+    background-color: var(--#{$prefix}header-desktop-fixed-bg-color);
+
+    // Header Logo
+    .header-logo {
+      padding: 0;
+      display: flex;
+      align-items: center;
+
+      // Logos
+      .logo-default {
+        display: inline-block;
+      }
+
+      .logo-sticky {
+        display: none;
+      }
+    }
+
+    // Header menu
+    .header-menu {
+      display: flex;
+
+      .menu {
+        & > .menu-item {
+          @include menu-link-here-state(
+            $title-color: var(--#{$prefix}primary),
+            $icon-color: var(--#{$prefix}primary),
+            $bullet-color: var(--#{$prefix}primary),
+            $arrow-color: var(--#{$prefix}primary),
+            $bg-color: var(--#{$prefix}menu-link-bg-color-active),
+            $all-links: false
+          );
+        }
+      }
+    }
+
+    // Fixed header & sticky header modes
+    .header-fixed[data-kt-sticky-header="on"] & {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: get($header-config, desktop, fixed, z-index);
+      background-color: var(--#{$prefix}header-desktop-fixed-bg-color);
+      box-shadow: var(--#{$prefix}header-desktop-fixed-box-shadow);
+      height: get($header-config, desktop, fixed, height);
+      border-bottom: var(--#{$prefix}header-desktop-fixed-border);
+      padding: 0;
+
+      // Header Logo
+      .header-logo {
+        // Logos
+        .logo-default {
+          display: none;
+        }
+
+        .logo-sticky {
+          display: inline-block;
+        }
+      }
+    }
+
+    // Fixed header & NON sticky header modes
+    body:not([data-kt-sticky-header="on"]) & {
+      // Header menu
+      .header-menu {
+        .menu {
+          // Root links
+          & > .menu-item {
+            // Customize menu link default state
+            @include menu-link-default-state(
+              $title-color: #fff,
+              $icon-color: #4a4b68,
+              $bullet-color: #9899ac,
+              $arrow-color: #494b69,
+              $bg-color: null,
+              $all-links: false
+            );
+
+            // Customize menu link hover state
+            @include menu-link-hover-state(
+              $title-color: $white,
+              $icon-color: $white,
+              $bullet-color: $white,
+              $arrow-color: $white,
+              $bg-color: rgba($white, 0.1),
+              $all-links: false
+            );
+
+            // Customize menu link here state
+            @include menu-link-here-state(
+              $title-color: $white,
+              $icon-color: $white,
+              $bullet-color: $white,
+              $arrow-color: $white,
+              $bg-color: rgba($white, 0.1),
+              $all-links: false
+            );
+
+            // Customize menu link show state
+            @include menu-link-show-state(
+              $title-color: $white,
+              $icon-color: $white,
+              $bullet-color: $white,
+              $arrow-color: $white,
+              $bg-color: rgba($white, 0.1),
+              $all-links: false
+            );
+
+            // Customize menu link active state
+            @include menu-link-active-state(
+              $title-color: $white,
+              $icon-color: $danger,
+              $bullet-color: $danger,
+              $arrow-color: $white,
+              $bg-color: rgba($white, 0.1),
+              $all-links: false
+            );
+          }
+        }
+      }
+    }
+
+    .header-title {
+      color: white;
+      font-weight: 400;
+      font-size: 26px;
+    }
+
+    .user-info {
+      color: white;
+      cursor: pointer;
+      &__name {
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+      }
+    }
+
+    .user-menu-dropdown {
+      color: #ffffff !important;
+      background-color: #004e6a !important;
+      margin: 32px 0px 0px 0px !important;
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+      border-radius: 0;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      .menu-item {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        a {
+          text-decoration: none !important;
+        }
+      }
+      .menu-sub .menu-item {
+        padding-left: 2px !important;
+        padding-right: 0px !important;
+        a {
+          text-decoration: none !important;
+        }
+      }
+      .menu-item .menu-link {
+        color: #ffffff !important;
+      }
+      .menu-item .menu-link .menu-arrow {
+        color: #ffffff !important;
+        &:after {
+          color: #ffffff !important;
+        }
+      }
+      .logout-btn {
+        width: 80%;
+        font-weight: 600;
+        background: #ffffff !important;
+        color: #023345 !important;
+        border-radius: 30px;
+        margin-top: 1rem;
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+      }
+      .btn.btn-primary:hover,
+      .btn.btn-primary:active {
+        background: white !important;
+        color: #023345;
+      }
+      span.menu-link .menu-title {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: get($header-config, tablet-and-mobile, default, height);
+    border-bottom: var(--#{$prefix}header-tablet-and-mobile-default-border);
+    background-color: var(--#{$prefix}header-desktop-fixed-bg-color);
+
+    // Header Logo
+    .header-logo {
+      // Logos
+      .logo-default {
+        display: inline-block;
+      }
+
+      .logo-sticky {
+        display: none;
+      }
+    }
+
+    // Fixed header and header sticky modes
+    .header-tablet-and-mobile-fixed[data-kt-sticky-header="on"] & {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: get($header-config, tablet-and-mobile, fixed, z-index);
+      height: get($header-config, tablet-and-mobile, fixed, height);
+      min-height: get($header-config, tablet-and-mobile, fixed, height);
+      background-color: var(
+        --#{$prefix}header-tablet-and-mobile-fixed-bg-color
+      );
+      box-shadow: var(--#{$prefix}header-tablet-and-mobile-fixed-box-shadow);
+      border-bottom: var(--#{$prefix}header-tablet-and-mobile-fixed-border);
+
+      // Header Logo
+      .header-logo {
+        // Logos
+        .logo-default {
+          display: none;
+        }
+
+        .logo-sticky {
+          display: inline-block;
+        }
+      }
+    }
+
+    // Header menu
+    .header-menu {
+      display: none;
+    }
+  }
+
+  .header-title {
+    color: white;
+    font-weight: 400;
+    font-size: 26px;
+  }
+
+  .user-info {
+    color: white;
+    cursor: pointer;
+    &__name {
+      color: white;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+  }
+
+  .user-menu-dropdown {
+    color: #ffffff !important;
+    background-color: #004e6a !important;
+    margin: 15px 0px 0px 0px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    border-radius: 0;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    .menu-item {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      a {
+        text-decoration: none !important;
+      }
+    }
+    .menu-sub .menu-item {
+      padding-left: 2px !important;
+      padding-right: 0px !important;
+      a {
+        text-decoration: none !important;
+      }
+    }
+    .menu-item .menu-link {
+      color: #ffffff !important;
+    }
+    .menu-item .menu-link .menu-arrow {
+      color: #ffffff !important;
+      &:after {
+        color: #ffffff !important;
+      }
+    }
+    .logout-btn {
+      width: 80%;
+      font-weight: 600;
+      background: #ffffff !important;
+      color: #023345 !important;
+      border-radius: 30px;
+      margin-top: 1rem;
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+    }
+    .btn.btn-primary:hover {
+      background: white !important;
+      color: #023345;
+    }
+    span.menu-link .menu-title {
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.AppTextArea {
+  .label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .label-required {
+    margin-left: 4px;
+    color: var(--bs-danger);
+  }
+
+  .form-control {
+    border-radius: 4px;
+
+    &:focus {
+      outline: 2px solid #80bdff;
+      box-shadow: none;
+    }
+  }
+}
